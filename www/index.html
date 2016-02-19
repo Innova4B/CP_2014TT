@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/customization.css" rel="stylesheet">
+    <link href="css/leaflet.css" rel="stylesheet">
+    <link href="css/leaflet.awesome-markers.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="fonts/foundation-icons.css" rel="stylesheet">
+    <link href="css/customization.css" rel="stylesheet">
+    <link href="css/ngDialog.min.css" rel="stylesheet">
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="js/ng-cordova/ng-cordova.min.js"></script>
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/miViajeControllers.js"></script>
+    <script src="js/mapaControllers.js"></script>
+    <script src="js/filesController.js"></script>
+    <script src="js/deactivationContoller.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/filesServices.js"></script>
+    <script src="js/directives.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/filesConfig.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/ion-audio/ion-audio.js"></script>
+
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="lib/ionic/js/angular/angular-translate.min.js"></script>
+    <script src="lib/ionic/js/angular/angular-translate-loader-static-files.min.js"></script>
+    <script src="js/leaflet/leaflet.js"></script>
+    <script src="js/leaflet/leaflet.awesome-markers.min.js"></script>
+    <script src="js/markerclusterer.js"></script>
+
+    <script src="lib/ionic-rating/ionic-rating.min.js"></script>
+
+    <script src="js/ngDialog/ngDialog.min.js"></script>
+    <script src="js/ngDialog/angular-modal-service.js"></script>
+  </head>
+  <body ng-app="starter">
+    <!--
+      The nav bar that will be updated as we navigate between views.
+    -->
+    <ion-side-menus ng-controller="ContentCtrl">
+      <ion-side-menu-content>
+        <ion-nav-bar class="bar-custom header">
+        </ion-nav-bar>
+        <!--
+          The views will be rendered in the <ion-nav-view> directive below
+          Templates are in the /templates folder (but you could also
+          have templates inline in this html file if you'd like).
+        -->
+        <ion-nav-view cache-view="false"></ion-nav-view>
+        <script type="text/javascript" src="js/jsapi.js"></script>
+        <script type="text/javascript" src="js/leaflet/markerwithlabel.js"></script>
+        <script type="text/javascript" src='js/angular-google-maps/lodash.js'></script>
+        <script type="text/javascript" src='js/angular-google-maps/angular-google-maps.js'></script>
+      </ion-side-menu-content>
+      <ion-side-menu side="left" width="230" expose-aside-when="large">
+      <ion-list>
+        <div class="item bar bar-custom"></div>
+        <a class="item item-icon-left optionLst" href="#/tab/guia" menu-toggle="left">
+          <i class="icon fa fa-home optionLst"></i>
+          <h2 class="padding-left">{{'Inicio' | translate}}</h2>
+        </a>
+        <a class="item item-icon-left optionLst" href="#/tab/miviaje" menu-toggle="left">
+          <i class="icon ion-earth optionLst"></i>
+          <h2 class="padding-left">{{'tab.miviaje' | translate}}</h2>
+        </a>
+        <a class="item item-icon-left optionLst" href="#/tab/mapa" menu-toggle="left">
+          <i class="icon fi-map optionLst"></i>
+          <h2 class="padding-left">{{'tab.mapa' | translate}}</h2>
+        </a>
+        <a class="item item-icon-left optionLst" href="#/tab/events" menu-toggle="left">
+          <i class="icon ion-ios-book optionLst"></i>
+          <h2 class="padding-left">{{'Agenda' | translate}}</h2>
+        </a>
+        <a class="item item-icon-left optionLst" href="#/tab/informacion" menu-toggle="left">
+          <i class="icon fa fa-info optionLst"></i>
+          <h2 class="padding-left">{{'Informacion' | translate}}</h2>
+        </a>
+        <a class="item item-icon-left optionLst" href="#/tab/settings" menu-toggle="left">
+          <i class="icon fa fa-cogs optionLst"></i>
+          <h2 class="padding-left">{{'tab.configuracion' | translate}}{{online}}</h2>
+        </a>
+      </ion-list>
+      <ion-side-menu>
+    </ion-side-menus>
+  </body>
+</html>

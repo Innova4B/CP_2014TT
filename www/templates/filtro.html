@@ -1,0 +1,25 @@
+<h4 class="">{{'Filtrar'|translate}}</h4>
+<ul class="list" ng-repeat="item in filtro">
+	<li class=" item-checkbox">
+		<label class="checkbox">
+			<input type="checkbox" ng-model="item.enabled" checked>
+		</label>
+		{{item.text}}
+	</li>
+</ul>
+<ul class="list">
+	<li class=" item-checkbox">
+		<label class="checkbox">
+			<input type="checkbox" ng-model="filtroChild.enabled" checked>
+		</label>
+		{{'filtro.familia'|translate}}
+	</li>
+</ul>
+<ul class="list">
+	<li class=" item-checkbox">
+		<label class="checkbox">
+			<input type="checkbox" ng-model="filtroDisabled.enabled" checked>
+		</label>
+		{{'filtro.discapacitados'|translate}}
+	</li>
+</ul>

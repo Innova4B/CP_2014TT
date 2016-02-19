@@ -1,0 +1,61 @@
+{
+	"tab.guia": "Guía",
+	"tab.miviaje": "Mi viaje",
+	"tab.mapa": "Mapa",
+	"tab.configuracion": "Configuración",
+	"Favoritos": "Favoritos",
+	"Cerca":"Cerca",
+	"Rutas":"Rutas",
+	"PuntosDeInteres":"Puntos de interes",
+	"Restaurantes":"Restaurantes",
+	"Bares": "Bares",
+	"Alojamiento": "Alojamiento",
+	"Agenda": "Agenda",
+	"Transporte": "Transporte",
+	"Informacion": "Informacion",
+
+	"Distancia": "Distancia",
+	"Horas": "horas",
+	"Duracion": "Duración",
+	"Info": "Info",
+	"Opiniones": "Opiniones",
+	"VerMapa": "Ver Mapa",
+	"Valoracion": "Valoración",
+	"Comenzar": "Comenzar",
+
+	"Visitado": "Visitado",
+	"Comentar": "Comentar",
+	"Votar": "Votar",
+	"comentarios": "comentarios",
+
+	"contextMenu.miviaje": "Añadir a mi viaje",
+	"contextMenu.miviaje.eliminar": "Eliminar de mi viaje",
+	"contextMenu.votar": "Votar",
+	"contextMenu.comentar": "Comentar",
+	"contextMenu.visto": "Visitado",
+	"contextMenu.visto.eliminar": "No visitado",
+
+	"mapa.tuposicion": "Tu posición",
+
+	"miviaje.empty": "No has añadido ningún punto de interés a tu viaje",
+
+	"Actualizaciones": "Actualizaciones disponibles: " ,
+	"DescargaActualizaciones": "¿Descargar actualizaciones?",
+	"Cancelar": "Cancelar",
+	"Descargar": "Descargar",
+	"Cargando_Datos": "Cargando Datos",
+	"Cargando_Mapas": "Cargando Mapas",
+
+	"toast.comentario": "Comentario añadido correctamente",
+
+	"website": "Página web",
+	"llamar": "Llamar",
+
+	"eu": "eu-ES",
+	"es": "es-ES",
+
+	"eu-ES": "eu",
+	"es-ES": "es",
+
+	"appDeactivated": "Lo sentimos, la app ha sido desactivada"
+}

@@ -1,0 +1,120 @@
+[
+  {
+    "id": 85,
+    "name": "San Telmo Museoa",
+    "latitude": 43.325,
+    "longitude": -1.98486,
+    "avgRating": 0,
+    "totalRating": 0,
+    "numVotes": 0,
+    "disabledFriendly": true,
+    "childFriendly": false,
+    "wifi": false,
+    "weight": 10,
+    "type": 1,
+    "mainImageApp": "85/images/thumbs/santelmo1.jpg",
+    "mainImageWeb": "/touristTour/uploads/1/1/pois/85/images/santelmo1.jpg",
+    "destination": "Donostia",
+    "tags": [
+      "Museoak"
+    ],
+    "photosApp": [
+      "85/images/thumbs/museo-san-telmo-donosti-02.jpg",
+      "85/images/thumbs/museo-san-telmo-museum.jpg"
+    ],
+    "photosWeb": [
+      "/touristTour/uploads/1/1/pois/85/images/web/museo-san-telmo-donosti-02.jpg",
+      "/touristTour/uploads/1/1/pois/85/images/web/museo-san-telmo-museum.jpg"
+    ],
+    "audioguide": null,
+    "video": "https://www.youtube.com/embed/tg6Xajb_EgU",
+    "relevance": 5,
+    "phone": "943481580",
+    "url": "http://www.santelmomuseoa.com/",
+    "address": "",
+    "cost": 6,
+    "title": "San Telmo Museoa",
+    "description": "San Telmo Museoa Parte Zaharrean dago, domingotarren komentua izan zen XVI. mendeko eraikin bikain batean. Antzina, artilleria-kuartela izan zen, eta XX. mendean, udal-museo bihurtu zuten. Bertako klaustro errenazentista eta Jose Maria Sert artista katalanaren mihisekin dekoratuta dagoen eliza zaharra, baita museoaren gainerako areto eta sailak ere, birmoldatu eta handitu egin zituzten 2011n.",
+    "moreInfo": "",
+    "position": null,
+    "transition": null
+  },
+  {
+    "id": 86,
+    "name": "San Vicente eliza",
+    "latitude": 43.3246,
+    "longitude": -1.98416,
+    "avgRating": 5,
+    "totalRating": 5,
+    "numVotes": 1,
+    "disabledFriendly": false,
+    "childFriendly": false,
+    "wifi": false,
+    "weight": 1,
+    "type": 1,
+    "mainImageApp": "86/images/thumbs/san-vicente.jpg",
+    "mainImageWeb": "/touristTour/uploads/1/1/pois/86/images/web/san-vicente.jpg",
+    "destination": "Donostia",
+    "tags": [
+      "Monumentuak"
+    ],
+    "photosApp": [
+      "86/images/thumbs/iglesia-de-san-vicente.jpg"
+    ],
+    "photosWeb": [
+      "/touristTour/uploads/1/1/pois/86/images/web/iglesia-de-san-vicente.jpg"
+    ],
+    "audioguide": null,
+    "video": null,
+    "relevance": 5,
+    "phone": "",
+    "url": "",
+    "address": "",
+    "cost": null,
+    "title": "San Vicente eliza",
+    "description": "San Bizente eliza izango da segur aski Donostiako eraikinik zaharrena. 1507. urtean hasi ziren eraikuntza lanak, Miguel de Santa Celay eta Juan de Urrrutia hargin maisuen zuzendaritzapean. Tenplu gotiko oin angeluzuzen honek hiru habearte ditu, gurutzadura alboko fatxadekin lerrokaturik duela. Erdiko habeartea, ojiba estiloaren ereduaren araberakoa, albokoak baino garaiagoa da.",
+    "moreInfo": "",
+    "position": null,
+    "transition": null
+  },
+  {
+    "id": 87,
+    "name": "Eureka! Zientzia Museoa",
+    "latitude": 43.2905,
+    "longitude": -1.98433,
+    "avgRating": 0,
+    "totalRating": 0,
+    "numVotes": 0,
+    "disabledFriendly": false,
+    "childFriendly": false,
+    "wifi": false,
+    "weight": 1,
+    "type": 1,
+    "mainImageApp": "87/images/thumbs/museo-de-la-ciencia.jpg",
+    "mainImageWeb": "/touristTour/uploads/1/1/pois/87/images/museo-de-la-ciencia.jpg",
+    "destination": "Donostia",
+    "tags": [
+      "Museoak"
+    ],
+    "photosApp": [
+      "87/images/thumbs/Eureka-Zientzia-Museoa-626x303.jpg",
+      "87/images/thumbs/foto-zientzia-1.jpg"
+    ],
+    "photosWeb": [
+      "/touristTour/uploads/1/1/pois/87/images/web/Eureka-Zientzia-Museoa-626x303.jpg",
+      "/touristTour/uploads/1/1/pois/87/images/web/foto-zientzia-1.jpg"
+    ],
+    "audioguide": null,
+    "video": "https://www.youtube.com/embed/3ITjtJ1gD-k",
+    "relevance": 0,
+    "phone": "943012478",
+    "url": "http://www.eurekamuseoa.es/eu",
+    "address": "Paseo Mikeletegi, 43-45 / 20009 Donostia - San SebastiÃ¡n",
+    "cost": 7,
+    "title": "Eureka! Zientzia Museoa",
+    "description": "Ezagut ezazu zientziaren alderdirik jostagarriena! Eureka! Zientzia Museoan ondo pasatuz ikas dezakezu. 169 modulu esperimental baino gehiago dituen erakusketa iraunkorraz gain, Txikiklik aretoa ere badugu, 4 urtetik 9 urtera bitarteko haurrentzat, basoko animalien bizilekua eta bost zentzumenak ezagut ditzaten. Gidatutako jardueren eskaintza asteburu oro; nola laztu ileak Elektrizitatearen antzokian; edo 10.000 iltze dituen fakir-ohean etzatea.",
+    "moreInfo": "",
+    "position": null,
+    "transition": null
+  }
+]

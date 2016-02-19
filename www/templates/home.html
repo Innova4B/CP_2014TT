@@ -1,0 +1,22 @@
+<ion-view hide-nav-bar="true" >
+  <ion-content class="home" scroll="false">
+      <div class="block1">
+        <h1 id="title" class="principal"><span>Tourist Tour APP</span></h1>
+        <h3 id="baseline" class="principal"><span>2015</span></h3>
+      </div>
+
+      <div class="card home-langs" ng-controller="TranslateCtrl">
+        <div class="item item-divider home item-stable">
+          <p>Seleccione el idioma de instalación:</p>
+        </div>
+        <div class="item item-text-wrap" ng-repeat="lang in langs">
+          <button class="button button-clear button-dark" ng-click="changeLanguage(lang)">{{lang+".name"|translate}}</button>
+        </div>
+        <div class="item item-text-wrap" ng-show="!langs">
+          <button class="button button-clear button-dark" ng-click="changeLanguage('es_ES')">Castellano</button>
+          <button class="button button-clear button-dark" ng-click="changeLanguage('eu_ES')">Euskara</button>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

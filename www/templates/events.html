@@ -1,0 +1,34 @@
+<ion-view hide-nav-bar="false"  title="{{'Agenda' | translate}}">
+  <ion-nav-buttons side="left">
+    <button class="button button-icon button-clear button-light ion-navicon" menu-toggle="left">
+    </button>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="right">
+    <button class="button button-icon button-clear button-light fa fa-filter sidemenu" ng-click="showFilter()">
+    </button>
+  </ion-nav-buttons>
+  <ion-content>
+    <ion-list>
+      <div collection-repeat="event in events">
+        <div>
+        <a class="item item-event" href="#/tab/events/{{event.eventId}}" on-hold="onHold(event)">
+            <div class="aside">
+              <p class="day">{{event.dayStart}}</p>
+              <p class="month">{{event.monthStart}}</p>
+              </p>
+            </div>
+            <h2 ng-bind-html="event.name"></h2>
+            <p class="left side-note" ng-show="event.location">
+              <i class="icon fa fa-thumb-tack"></i>
+              {{event.location}}
+            </p>
+            <p class="right side-note" ng-show="event.latitude">
+              {{event.distance}}<i class="icon ion-location padding-left"></i>
+            </p>
+        </a></div>  
+      </div>
+      <div ng-show="events.length==0"><p class="item">{{'events.empty'|translate}}</p></div>
+    </ion-list>
+
+  </ion-content>
+</ion-view>

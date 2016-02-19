@@ -1,0 +1,34 @@
+<ion-view hide-nav-bar="false"  title="{{'Rutas' | translate}}">
+  <ion-nav-buttons side="left">
+    <button class="button button-icon button-clear button-light ion-navicon" menu-toggle="left">
+    </button>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="right">
+    <button class="button button-icon button-clear button-light fa fa-filter sidemenu" ng-click="showFilter()">
+    </button>
+  </ion-nav-buttons>
+  <ion-content ng-controller="RutasCtrl">
+    <ion-list>
+      <div ng-repeat="ruta in rutas">
+        <a class="item poi-list" href="#/tab/rutas/{{ruta.routeId}}" on-hold="onHold(ruta)" ng-show="ruta.visible">
+          <div class="poi-list-box">
+            <h2>{{ruta.title}}</h2>
+            <p ng-bind-html="ruta.description"></p>
+            <p class="right side-note padding-left" ng-show="ruta.distance">
+              {{ruta.distance}}<i class="icon ion-location padding-left"></i>
+            </p>
+            <p class="right side-note" ng-show="ruta.time">{{ruta.time}} {{'Horas' | translate}}</p>
+            <div class="list-rating">
+              <i class="icon" ng-class="{'ion-ios-star-outline':routeRatings[ruta.routeId]<0.5, 'ion-ios-star-half':routeRatings[ruta.routeId]>=0.5 && routeRatings[ruta.routeId]<1, 'ion-ios-star':routeRatings[ruta.routeId]>=1}"></i>
+              <i class="icon" ng-class="{'ion-ios-star-outline':routeRatings[ruta.routeId]<1.5, 'ion-ios-star-half':routeRatings[ruta.routeId]>=1.5 && routeRatings[ruta.routeId]<2, 'ion-ios-star':routeRatings[ruta.routeId]>=2}"></i>
+              <i class="icon" ng-class="{'ion-ios-star-outline':routeRatings[ruta.routeId]<2.5, 'ion-ios-star-half':routeRatings[ruta.routeId]>=2.5 && routeRatings[ruta.routeId]<3, 'ion-ios-star':routeRatings[ruta.routeId]>=3}"></i>
+              <i class="icon" ng-class="{'ion-ios-star-outline':routeRatings[ruta.routeId]<3.5, 'ion-ios-star-half':routeRatings[ruta.routeId]>=3.5 && routeRatings[ruta.routeId]<4, 'ion-ios-star':routeRatings[ruta.routeId]>=4}"></i>
+              <i class="icon" ng-class="{'ion-ios-star-outline':routeRatings[ruta.routeId]<4.5, 'ion-ios-star-half':routeRatings[ruta.routeId]>=4.5 && routeRatings[ruta.routeId]<5, 'ion-ios-star':routeRatings[ruta.routeId]>=5}"></i>
+            </div>
+          </div>
+          <img src="{{fileSystem}}{{appDirectory}}{{appLanguage}}/routes/{{ruta.photoApp}}" orientable />
+        </a>
+      </div>
+    </ion-list>
+  </ion-content>
+</ion-view>

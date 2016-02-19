@@ -1,0 +1,96 @@
+<ion-view hide-nav-bar="true" title="">
+  <ion-nav-buttons side="right">
+  </ion-nav-buttons>
+  <ion-header class="bar bar-custom bar-header">
+      <a class="button back-button" href="{{backPath}}"><i class="icon ion-chevron-left"></i></a>
+      <h1 class="title">{{'Alojamiento' | translate}}</h1>
+      <a class="button" href="#" ng-click="openShare(accommodation.mainImageApp)"><i class="icon ion-android-share-alt"></i></a>
+  </ion-header>
+  <ion-header class="bar bar-custom bar-subheader">
+    <div class="poi-menu-buttons">
+      <a class="item poiMenuList item-text-wrap active" href="#" ng-click="accommodationInfo()">
+        <h2 class="padding-left">{{'Info' | translate}}</h2>
+      </a>
+      <a class="item poiMenuList item-text-wrap" href="#" ng-click="accommodationMapa()">
+        <h2 class="padding-left">{{'Mapa' | translate}}</h2>
+      </a>
+      <a class="item poiMenuList item-text-wrap" href="#" ng-click="accommodationOpinion()">
+        <h2 class="padding-left">{{'Opiniones' | translate}}</h2>
+      </a>
+    </div>
+  </ion-header>
+  <ion-content class="has-header has-subheader">
+    <ion-slide-box does-continue="true" class="imgHeader" ng-show="!video">
+      <ion-slide>
+        <img src="{{fileSystem}}{{appDirectory}}{{appLanguage}}/accommodations/{{accommodation.mainImageApp}}" orientable>
+      </ion-slide>
+      <ion-slide ng-repeat="photo in accommodation.photosApp">
+        <img ng-src="{{fileSystem}}{{appDirectory}}{{appLanguage}}/accommodations/{{photo}}" orientable> 
+      </ion-slide>
+    </ion-slide-box>
+    <div class="imgHeader" ng-show="video">
+      <iframe width="100%" height="230" ng-src="{{trustSrc(accommodation.video)}}" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="round-button-outer">
+      <div class="round-button-group" ng-controller="FavoriteCtrl" ng-class="{'video':video}">
+          <div class="round-button">
+            <button class="button button-light social-button" ng-click="visitado(5)" ng-class="{'button-visited':isVisited}">
+              <i class="ion-checkmark"></i>
+            </button>
+          </div>
+          <div class="round-button">
+            <button class="button button-light social-button" ng-click="favorito(5)" ng-class="{'button-visited':isFavorite}">
+              <i class="ion-android-favorite"></i>
+            </button>
+            </div>
+      </div>
+    </div>
+    
+    <div class="item item-text-wrap poi-item">
+      <div class="poi-detail-header">
+        <div class="poi-list-rating">
+          <i class="icon" ng-class="{'ion-ios-star-outline':poiRatings[accommodation.id]<0.5, 'ion-ios-star-half':poiRatings[accommodation.id]>=0.5 && poiRatings[accommodation.id]<1, 'ion-ios-star':poiRatings[accommodation.id]>=1}"></i>
+          <i class="icon" ng-class="{'ion-ios-star-outline':poiRatings[accommodation.id]<1.5, 'ion-ios-star-half':poiRatings[accommodation.id]>=1.5 && poiRatings[accommodation.id]<2, 'ion-ios-star':poiRatings[accommodation.id]>=2}"></i>
+          <i class="icon" ng-class="{'ion-ios-star-outline':poiRatings[accommodation.id]<2.5, 'ion-ios-star-half':poiRatings[accommodation.id]>=2.5 && poiRatings[accommodation.id]<3, 'ion-ios-star':poiRatings[accommodation.id]>=3}"></i>
+          <i class="icon" ng-class="{'ion-ios-star-outline':poiRatings[accommodation.id]<3.5, 'ion-ios-star-half':poiRatings[accommodation.id]>=3.5 && poiRatings[accommodation.id]<4, 'ion-ios-star':poiRatings[accommodation.id]>=4}"></i>
+          <i class="icon" ng-class="{'ion-ios-star-outline':poiRatings[accommodation.id]<4.5, 'ion-ios-star-half':poiRatings[accommodation.id]>=4.5 && poiRatings[accommodation.id]<5, 'ion-ios-star':poiRatings[accommodation.id]>=5}"></i>
+        </div>
+        <div class="item item-icon-left poi-detail" id="poi-detail">
+          <i class="icon fa fa-bed pois"></i><h1>{{accommodation.title}}</h1>
+        </div>
+        <div class="friendly">
+          <i class="icon fa fa-wheelchair right friendly" ng-show="accommodation.disabledFriendly"></i>
+          <i class="icon fa fa-child right friendly" ng-show="accommodation.childFriendly"></i>
+          <i class="icon fa fa-wifi right friendly" ng-show="accommodation.wifi"></i>
+        </div>
+        <div class="more-info">
+          <p ng-show="accommodation.cost">{{'Precio'|translate}}: {{accommodation.cost}} €</p>
+          <p ng-show="accommodation.address"></i>{{accommodation.address}}</p>
+        </div>
+      </div>
+      <div class="poi-detail-body">
+        <p ng-bind-html="accommodation.description" class="wrapping_list_item padding-top"></p>
+        <p ng-bind-html="accommodation.moreInfo" class="wrapping_list_item padding-top padding-top"></p>
+        <div class="contact-buttons">
+          <div class="round-contact-button">
+            <button class="button button-light bottom-button" ng-click="dialNumber()" ng-show="accommodation.phone">
+              <i class="ion-ios-telephone"></i>
+            </button>
+          </div>
+          <div class="round-contact-button">
+            <button class="button button-light bottom-button" ng-click="openUrl()" ng-show="accommodation.url">
+              <i class="ion-link"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </ion-content>
+  <ion-footer-bar class="bar-light" ng-controller="AudioCtrl" ng-show="tracks.length>0">
+    <ion-audio-track ng-repeat="track in tracks" track="track">
+      <div class="audio-inline"><ion-audio-play><a class="button button-icon icon ion-play"></a></ion-audio-play></div>
+      <div class="audio-progress-bar"><ion-audio-progress-bar display-time class="audio-inline"></ion-audio-progress-bar></div>
+    </ion-audio-track>
+  </ion-footer-bar>
+</ion-view>

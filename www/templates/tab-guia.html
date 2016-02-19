@@ -1,0 +1,15 @@
+<ion-view hide-nav-bar="false" title=""  ng-controller="GuiaCtrl">
+  <ion-nav-buttons side="left">
+    <button class="button button-icon button-clear button-light ion-navicon" menu-toggle="left">
+    </button>
+  </ion-nav-buttons>
+  <ion-content class="tab-guia" scroll="false">
+    <div class="item item-text-wrap guide-box">
+      <div class="temp" ng-show="temp"><p class="temperature">{{temp}}ºC</p><img src="img/weather-icons/{{icon}}.svg" class="weather-icon inverted"></img></div>
+      <h1 class="linkTitle"><span>{{destination}}</span></h1>      
+      <p>{{'Poblacion' | translate}}: 186 126 hab</p>
+      <p>{{'Altitud' | translate}}: 6m</p>
+    </div>
+    <div class="menu-button-outer"><div class="menu-button" ng-click="openMenu()"><img src="img/boton-redondo.png"></img></div></div>
+  </ion-content>
+</ion-view>

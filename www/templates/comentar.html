@@ -1,0 +1,24 @@
+<ion-view hide-nav-bar="false" title="">
+  <ion-nav-buttons side="left">
+    <a class="button back-button" href="#/tab/{{tipo}}"><i class="icon ion-chevron-left"></i></a>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="right">
+    </ion-nav-buttons>
+  <ion-content>
+  	<div class="item item-text-wrap">
+      <h1 class="padding-bottom">{{item.name}}</h1>
+      
+      <rating ng-model="rate" max="max" class="rating-center"></rating>
+      <p id="comment-rate" ng-show="false">{{rate}}</p>
+    </div>
+    <div class="list list-inset form">
+      <label class="item item-input">
+        <input type="text" placeholder="Nombre" ng-model="formData.user">
+      </label>
+      <label class="item item-input">
+        <textarea placeholder="Comentario" ng-model="formData.comment"></textarea>
+      </label>
+    </div>
+    <button class="button icon-left ion-chatbox button-custom imgCenter" ng-click="addComment()">{{'Comentar'|translate}}</button>
+  </ion-content>
+</ion-view>

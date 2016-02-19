@@ -1,0 +1,39 @@
+<ion-view hide-nav-bar="false" title="{{'Agenda' | translate}}">
+  <ion-nav-buttons side="left">
+    <a class="button back-button" href="{{backPath}}"><i class="icon ion-chevron-left"></i></a>
+
+  </ion-nav-buttons>
+  <ion-nav-buttons side="right">
+    <a class="button" href="#" ng-click="openShare()"><i class="icon ion-android-share-alt"></i></a>
+  </ion-nav-buttons>
+  <ion-content>
+    <div class="round-button-outer">
+      <div class="round-button-group-event" ng-controller="FavoriteCtrl">
+          <div class="round-button-event">
+            <button class="button button-light social-button" ng-click="visitado(6)" ng-class="{'button-visited':isVisited}">
+              <i class="ion-checkmark"></i>
+            </button>
+          </div>
+          <div class="round-button-event">
+            <button class="button button-light social-button" ng-click="favorito(6)" ng-class="{'button-visited':isFavorite}">
+              <i class="ion-android-favorite"></i>
+            </button>
+            </div>
+      </div>
+    </div>
+    <div class="item item-text-wrap poi-item event">
+      <div class="poi-detail-body event">
+        <div class="item item-icon-left poi-detail" id="poi-detail">
+          <i class="icon ion-ios-book pois"></i><h1>{{event.name}}</h1>
+        </div>
+        <p ng-bind-html="event.description" class="wrapping_list_item padding-top item-description"></p>
+        <p ng-show="event.location" class="padding-top"><i class="icon icon-detail fa fa-thumb-tack padding-right padding-bottom"></i>{{event.location}}</p>
+        <p ng-show="event.dateStart"><i class="icon icon-detail fa fa-calendar padding-right padding-bottom"></i>{{event.dateStart}} <span ng-show="event.dateEnd"> - {{event.dateEnd}}</span></p>
+      </div>
+      <button class="button button-light bottom-button" ng-click="openUrl()" ng-show="event.url">
+        <i class="ion-link"></i>
+      </button>
+    </div>
+    
+  </ion-content>
+</ion-view>

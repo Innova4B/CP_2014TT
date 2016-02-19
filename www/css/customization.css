@@ -1,0 +1,423 @@
+/* HEADER BAR */
+.bar.bar-custom {
+	border-color: #007798;
+	background-color: #007caf;   /* headerColor */
+	color: #fff;
+}
+
+.bar-custom .button {
+	border-color: #007798;
+	background-color: #007caf;   /* headerColor */
+	color: #fff;
+}
+
+/* FOOTER */
+.tabs-striped.tabs-color-custom .tab-item.tab-item-active, .tabs-striped.tabs-color-custom .tab-item.active, .tabs-striped.tabs-color-custom .tab-item.activated {
+  margin-top: -2px;
+  color: #007caf;   /* footerColor */
+  border: 0 solid #007caf;   /* footerColor */
+  border-top-width: 2px;
+}
+
+/* MENU, ICONS AND BUTTONS */
+.button.button-custom-menu {
+  border-color: #6A959D;
+  background-color: #007caf;  /* menuIconsColor */
+  color: #fff;
+}
+.button.button-custom-menu:hover {
+  color: #fff;
+  text-decoration: none;
+}
+.button.button-custom-menu.active, .button.button-custom-menu.activated {
+  border-color: #6A959D;
+  background-color: #6A959D;
+  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.button.button-light {
+	border-color: #ddd;
+	background-color: #fff;
+	color: #444;
+}
+
+.button.button-light:hover {
+  color: #444;
+  text-decoration: none;
+}
+.button.button-light.active, .button.button-light.activated {
+  border-color: #ccc;
+  background-color: #fafafa;
+  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.button.button-dark {
+  border-color: #111;
+  background-color: #444;
+  color: #fff;
+}
+
+.button.button-dark:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.button.button-dark.active, .button.button-dark.activated {
+  border-color: #000;
+  background-color: #262626;
+  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.bar .button.back-button {
+  border: none;
+  padding-top: 3px;
+}
+
+.button.button-custom.button-clear {
+  border-color: transparent;
+  background: none;
+  box-shadow: none;
+  color: #007caf;  /* menuIconsColor */
+}
+
+.button.button.button-clear.button-custom.activated {
+  border-color: transparent;
+  background: none;
+  box-shadow: none;
+  color: #007caf;  /* menuIconsColor */
+}
+
+.button.button-custom {
+  border-color: #6A959D;
+  background-color: #007caf;  /* menuIconsColor */
+  color: #fff;
+}
+
+.button.button-custom:hover {
+  color: #fff;
+  text-decoration: none;
+}
+.button.button-custom.active, .button.button-custom.activated {
+  border-color: #6A959D;
+  background-color: #6A959D;
+  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.button.button-custom-menu.button-clear {
+  border-color: transparent;
+  background: none;
+  box-shadow: none;
+  color: #007caf;  /* menuIconsColor */
+}
+
+.button.button-custom-menu {
+  border-color: #6A959D;
+  background-color: #007caf;  /* menuIconsColor */
+  color: #fff;
+}
+
+.button.button-positive.active, .button.button-positive.activated {
+	border-color: #0c63ee;
+	background-color: #0c63ee;
+	box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.checkbox input:checked:before, .checkbox input:checked + .checkbox-icon:before {
+  background: #007caf;
+  border-color: #007caf;
+}
+
+.aside {
+  width: 15%;
+  float: left;
+  background-color: #007caf; /* menuIconsColor */
+  margin-right: 10px;
+  padding: 5px 0 5px 0;
+  min-height: 68px;
+}
+
+.aside p {
+  color: #fff !important;
+  margin: 0;
+  text-align: center;
+}
+
+.aside p.day {
+  font-size: 28px;
+}
+
+.aside p.month {
+  text-transform: uppercase;
+  font-size: 15px;
+}
+
+.button.button-light.social-button {
+  border: none;
+  background-color: #ccc;
+  color: #fff;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  font-size: 1.5em;
+  margin: 0 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+button.button.button-light.social-button.button-visited {
+  background-color: #007caf; /* menuIconsColor */
+  color: #fff;
+}
+
+.round-button-group {
+  position: absolute;
+  top: 200px;
+  width: 100%;
+}
+
+.round-button-group-event {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.round-button, .round-button-event {
+  float: left;
+  width: 50%;
+}
+
+.round-button-text {
+  font-size: 0.5em;
+  position: absolute;
+  top: 25px;
+  left: 4px;
+}
+
+.poi-detail i {
+  background-color: #007caf !important; /* menuIconsColor */
+}
+
+/* GUIDE ICONS */
+.optionLst i {
+  padding: 3px;
+  border-radius: 50%;
+  color: #ddd;
+  font-size: 0.7em;
+}
+
+/* BODY */
+ion-content {
+	background-color: #EFEFEF;   /* bodyBgColor */
+	background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.item, a.item {
+  background-color: transparent;
+}
+
+/* HOME */
+ion-content.home {
+	background-color: #DFEBF2;   /* homeBgColor */
+	background-image: url('../img/home-background.jpg'); /* homeBgURL*/
+	background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.item, a.item {
+  background-color: transparent;
+}
+
+/* FONTS */
+body, .ionic-body, .item p, input {
+  font-family: "Trebuchet MS", Helvetica, sans-serif; /* contentFont */
+  font-size: 18px;  /* contentSize */
+  color: #666; /* contentColor */
+}
+
+button, select, textarea, .tabs-icon-top > .tabs .tab-item {
+  font-family: "Trebuchet MS", Helvetica, sans-serif; /* contentFont */
+}
+
+.item h1 {
+  font-family: "Trebuchet MS", Helvetica, sans-serif; /* titleFont */
+  font-size: 24px;  /* titleSize */
+  color: #007caf;   /* titleColor*/
+}
+
+.item h2 {
+  font-family: "Trebuchet MS", Helvetica, sans-serif; /* listTitleFont */
+  font-size: 20px;  /* listTitleFont*/
+  color: #007caf;   /* listTitleFont*/
+}
+
+/* HOME PAGE */
+
+img#header {
+  content: url('../img/guideImage.png'); /* headerImageURL*/
+}
+
+ion-content.tab-guia {
+  background-image: url('../img/guide-background.jpg');
+  background-size: cover;
+}
+
+h1.linkTitle span, h1#title span, h3#baseline span {
+  display: none;
+}
+
+h1#title:after {
+  content: "Tourist Tour";
+}
+
+h3#baseline:after {
+  content: "";
+}
+
+h1.linkTitle:after {
+  content: "Tourist Tour";
+}
+
+#title {
+  font-size: 40px;  /* mainTitleSize */
+  font-family: "Trebuchet MS", Helvetica, sans-serif;  /* mainTitleFont */
+  color: #fff;  /* mainTitleColor */
+  padding: 20px 0 20px 0;
+  text-align: center;
+}
+
+#baseline {
+  font-size: 20px;  /* baselineSize */
+  font-family: "Trebuchet MS", Helvetica, sans-serif;  /* baselineFont */
+  color: #999;   /* baselineColor */
+  padding: 0 0;
+  text-align: center;
+}
+
+.block1 {
+  margin-top: 70px;
+  background-color: rgba(0,0,0,0.3);
+}
+
+.home-logo {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+}
+
+div#imgDiv {
+  position: relative;
+  left: -50%;
+  margin: 15px 0 0 0;
+  background-color: rgba(0,0,0,0.3);
+}
+
+/* INFOWINDOW */
+
+.gm-style-iw {
+   height: 35px !important;
+   top: 0 !important;
+   left: 0 !important;
+   border-radius: 2px 2px 0 0;
+}
+
+#iw_container i {
+  border-radius: 50%;
+  font-size: 1.5em;
+  height: 30px;
+  color: #fff;
+}
+
+.labels {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  width: 40px;
+  white-space: nowrap;
+}
+
+.labels .fa {
+  font-size: 22px;
+}
+
+.labels.pois {
+  color: #0F7F94;
+}
+
+.labels.restaurants {
+  color: #F18014;
+}
+
+.labels.pubs {
+  color: #C01077;
+}
+
+.labels.accommodations {
+  color: #7F04C2;
+}
+
+.labels.events {
+  color: #0EA564;
+}
+
+.labels.shops {
+  color: #666;
+}
+
+#iw_container i.pois {
+  background-color: #0F7F94;
+}
+
+#iw_container i.restaurants {
+  background-color: #F18014;
+}
+
+#iw_container i.pubs {
+  background-color: #C01077;
+}
+
+#iw_container i.accommodations {
+  background-color: #7F04C2;
+}
+
+#iw_container i.events {
+  background-color: #0EA564;
+}
+
+#iw_container i.shops {
+  background-color: #666;
+}
+
+h2.info-title {
+  display: inline;
+}
+
+.question p, .response p {
+  font-size: 20px;
+  color: #007caf;   /* menuIconsColor */
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+ion-audio-play {
+  background-color: #007caf;   /* menuIconsColor */
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin-top: 10px;
+  margin-left: 10px;
+
+}
+
+ion-audio-play a:before {
+  font-size: 23px !important;
+  position: absolute;
+  top: -3px;
+  left: 7px;
+  color: #fff;
+}
+
+i.radio-icon {
+  color: #007caf;   /* menuIconsColor */
+}

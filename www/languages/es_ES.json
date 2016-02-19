@@ -1,0 +1,141 @@
+{
+	"tab.guia": "Guía",
+	"tab.miviaje": "Mi viaje",
+	"tab.mapa": "Mapa",
+	"tab.configuracion": "Configuración",
+	"Favoritos": "Favoritos",
+	"Cerca":"Cerca",
+	"Rutas":"Rutas",
+	"PuntosDeInteres":"Puntos de interés",
+	"Restaurantes":"Restaurantes",
+	"Bares": "Bares",
+	"Alojamiento": "Alojamiento",
+	"Agenda": "Agenda",
+	"Eventos": "Eventos",
+	"Tiendas": "Tiendas",
+	"Informacion": "Información",
+	"PuntoInteres": "Punto de interés",
+	"PuntosInteres": "Puntos de interés",
+
+	"pois":"Puntos de interés",
+	"restaurants":"Restaurantes",
+	"pubs": "Bares",
+	"accommodations": "Alojamiento",
+	"events": "Agenda",
+	"rutas": "Rutas",
+	"shops": "Tiendas",
+
+	"Distancia": "Distancia",
+	"Horas": "horas",
+	"Duracion": "Duración",
+	"Info": "Info",
+	"Opiniones": "Opiniones",
+	"VerMapa": "Ver Mapa",
+	"Valoracion": "Valoración",
+	"Comenzar": "Comenzar",
+
+	"Visitado": "Visitado",
+	"Comentar": "Comentar",
+	"Mi viaje": "Mi viaje",
+	"Votar": "Votar",
+	"comentarios": "comentarios",
+
+	"contextMenu.miviaje": "Añadir a mi viaje",
+	"contextMenu.miviaje.eliminar": "Eliminar de mi viaje",
+	"contextMenu.votar": "Votar",
+	"contextMenu.comentar": "Comentar",
+	"contextMenu.visto": "Visitado",
+	"contextMenu.visto.eliminar": "No visitado",
+
+	"mapa.tuposicion": "Tu posición",
+
+	"miviaje.empty": "No has añadido ningún punto de interés a tu viaje",
+	"events.empty": "No hay eventos en el mes seleccionado",
+
+	"Actualizaciones": "Actualizaciones disponibles: " ,
+	"DescargaActualizaciones": "¿Descargar actualizaciones?",
+	"Cancelar": "Cancelar",
+	"Descargar": "Descargar",
+
+	"toast.comentario": "Comentario añadido correctamente",
+
+	"website": "Página web",
+	"llamar": "Llamar",
+
+	"Version": "Versión de la aplicación",
+	"Language": "Idioma seleccionado",
+
+	"mes.1": "Ene",
+	"mes.2": "Feb",
+	"mes.3": "Mar",
+	"mes.4": "Abr",
+	"mes.5": "May",
+	"mes.6": "Jun",
+	"mes.7": "Jul",
+	"mes.8": "Ago",
+	"mes.9": "Sep",
+	"mes.10": "Oct",
+	"mes.11": "Nov",
+	"mes.12": "Dic",
+
+	"offline.title": "Acceso a mapas",
+	"offline.message": "Debes tener conexión a internet para poder ver los mapas",
+	"button.accept": "Aceptar",
+
+	"eu": "eu_ES",
+	"es": "es_ES",
+	"ca": "ca_ES",
+	"en": "en_GB",
+	"fr": "fr_FR",
+
+	"eu_ES": "eu",
+	"es_ES": "es",
+	"ca_ES": "ca",
+	"en_GB": "en",
+	"fr_FR": "fr",
+
+	"eu_ES.name": "Euskera",
+	"es_ES.name": "Castellano",
+	"ca_ES.name": "Catalán",
+	"en_GB.name": "Inglés",
+	"fr_FR.name": "Francés",
+
+	"Cargando_Datos": "Cargando datos",
+	"select.language": "Selecciona el idioma",
+	"button.filtro": "Filtrar",
+	"filtro.familia": "Recomendable para familias",
+	"filtro.discapacitados": "Accesible para discapacitados",
+	"miviaje.export": "Compartir Mi viaje",
+
+	"appDeactivated": "Lo sentimos, la app ha sido desactivada",
+
+	"Aceptar": "Aceptar",
+	"Cancelar": "Cancelar",
+	"button.back": "Atras",
+
+	"Poblacion": "Población",
+	"Altitud": "Altitud",
+
+	"Beber": "Beber",
+	"Comer": "Comer",
+	"Dormir": "Dormir",
+
+	"Inicio": "Inicio",
+
+	"transmedia.text": "Responde a la pregunta para pasar al siguiente punto de interés de la ruta",
+	"route.next": "Pregunta",
+
+	"rightAnswer": "¡Correcto! Puedes continuar con la ruta",
+	"wrongAnswer": "No es correcto, inténtalo de nuevo",
+	"wrongAnswer.next": "Puedes continuar con la ruta",
+	"lastPoi": "Enhorabuena, has llegado al último punto de interés de la ruta",
+	"route.nextPoi": "Siguiente punto de interés",
+	"answer": "respuesta",
+	"resolve": "Respuesta correcta:",
+
+	"Filtrar": "Filtrar",
+	"Ordenar": "Ordenar por",
+
+	"poi.share": "Mira dónde he estado:",
+
+}

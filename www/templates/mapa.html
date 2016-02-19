@@ -1,0 +1,41 @@
+<ion-view hide-nav-bar="true" cache-view="false" ng-controller="AudioCtrl" title="">
+    <ion-nav-buttons side="right">
+    </ion-nav-buttons>
+    <ion-header class="bar bar-custom bar-header">
+      <a class="button back-button" href="{{backPath}}"><i class="icon ion-chevron-left"></i></a>
+      <h1 class="title">{{'PuntosDeInteres' | translate}}</h1>
+      <a class="button" href="#" ng-click="openGeo()"><i class="icon ion-android-navigate"></i></a>
+    </ion-header>
+    <ion-header class="bar bar-custom bar-subheader">
+      <div class="poi-menu-buttons">
+        <a class="item poiMenuList item-text-wrap" href="#" ng-click="poiInfo()">
+          <h2 class="padding-left">{{'Info' | translate}}</h2>
+        </a>
+        <a class="item poiMenuList item-text-wrap active" href="#" ng-click="poiMapa()">
+          <h2 class="padding-left">{{'Mapa' | translate}}</h2>
+        </a>
+        <a class="item poiMenuList item-text-wrap" href="#" ng-click="poiOpinion()">
+          <h2 class="padding-left">{{'Opiniones' | translate}}</h2>
+        </a>
+      </div>
+    </ion-header>
+    <ion-content class="has-header has-subheader" scroll="false">
+      <div id="map" class="mapa-poi" data-tap-disabled="true" ng-class="{'with-audio':hasAudio}"></div>
+      <div class="bottom" ng-class="{'with-audio':hasAudio}">
+        <ion-slide-box does-continue="true" show-pager="false">
+          <ion-slide ng-repeat="photoGroup in photos">
+            <div class="thumbnail" ng-repeat="photo in photoGroup" ng-click="openImage('{{fileSystem}}{{appDirectory}}{{appLanguage}}/{{tipo}}/{{photo}}')">
+              <img src="{{fileSystem}}{{appDirectory}}{{appLanguage}}/{{tipo}}/{{photo}}">
+            </div>
+          </ion-slide>
+        </ion-slide-box>
+      </div>
+      <ion-footer-bar class="bar-light" ng-show="tracks.length>0">
+        <ion-audio-track ng-repeat="track in tracks" track="track">
+          <div class="audio-inline"><ion-audio-play><a class="button button-icon icon ion-play"></a></ion-audio-play></div>
+          <div class="audio-progress-bar"><ion-audio-progress-bar display-time class="audio-inline"></ion-audio-progress-bar></div>
+        </ion-audio-track>
+      </ion-footer-bar>
+    </ion-content>
+    
+</ion-view>

@@ -1,0 +1,38 @@
+<ion-view hide-nav-bar="false"  title="{{'PuntosDeInteres' | translate}}">
+  <ion-nav-buttons side="left">
+    <button class="button button-icon button-clear button-light ion-navicon sidemenu" menu-toggle="left">
+    </button>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="right">
+    <button class="button button-icon button-clear button-light fa fa-filter sidemenu" ng-click="showFilter()"></button>
+    <button class="button button-icon button-clear button-light fa fa-sort-amount-asc sidemenu" ng-click="showSortDialog()"></button>
+  </ion-nav-buttons>
+  <ion-content>
+    <ion-list>
+      <div ng-repeat="poi in pois" item-height="100px" item-width="100%">
+
+        <a class="item poi-list" href="#/tab/pois/{{poi.id}}" on-hold="onHold(poi)" ng-if="poi.visible">
+          <div class="poi-list-box">
+            <p class="right side-note">
+              {{poi.distance}}<i class="icon ion-location padding-left"></i>
+            </p>
+            <h2>{{poi.title}}</h2>
+            <p ng-bind-html="poi.description"></p>
+            <div class="list-rating">
+              <i class="icon" ng-class="{'ion-ios-star-outline':poiRatings[poi.id]<0.5, 'ion-ios-star-half':poiRatings[poi.id]>=0.5 && poiRatings[poi.id]<1, 'ion-ios-star':poiRatings[poi.id]>=1}"></i>
+              <i class="icon" ng-class="{'ion-ios-star-outline':poiRatings[poi.id]<1.5, 'ion-ios-star-half':poiRatings[poi.id]>=1.5 && poiRatings[poi.id]<2, 'ion-ios-star':poiRatings[poi.id]>=2}"></i>
+              <i class="icon" ng-class="{'ion-ios-star-outline':poiRatings[poi.id]<2.5, 'ion-ios-star-half':poiRatings[poi.id]>=2.5 && poiRatings[poi.id]<3, 'ion-ios-star':poiRatings[poi.id]>=3}"></i>
+              <i class="icon" ng-class="{'ion-ios-star-outline':poiRatings[poi.id]<3.5, 'ion-ios-star-half':poiRatings[poi.id]>=3.5 && poiRatings[poi.id]<4, 'ion-ios-star':poiRatings[poi.id]>=4}"></i>
+              <i class="icon" ng-class="{'ion-ios-star-outline':poiRatings[poi.id]<4.5, 'ion-ios-star-half':poiRatings[poi.id]>=4.5 && poiRatings[poi.id]<5, 'ion-ios-star':poiRatings[poi.id]>=5}"></i>
+            </div>
+          </div>
+          <div class="image_container">
+            <img class="item item-image" src="{{fileSystem}}{{appDirectory}}{{appLanguage}}/pois/{{poi.mainImageApp}}" orientable />
+          </div>      
+        </a>
+      </div>
+    </ion-list>
+
+  </ion-content>
+</ion-view>
+

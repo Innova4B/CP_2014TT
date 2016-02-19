@@ -1,0 +1,81 @@
+<ion-view hide-nav-bar="true"  title="{{title}}">
+  <ion-header class="bar bar-custom bar-header">
+    <button class="button icon ion-navicon" ng-click="toggleSidebar()"></button>
+    <h1 class="title">{{title}}</h1>
+    <button class="button button-icon button-clear button-light fa fa-filter sidemenu" ng-click="miViajeFiltroDialog()"></button>
+  </ion-header>
+  <ion-header class="bar bar-custom bar-subheader">
+    <div class="poi-menu-buttons">
+      <a class="item poiMenuList item-text-wrap" href="#" ng-click="miViajeFavoritos()">
+        <h2 class="padding-left">{{'Favoritos' | translate}}</h2>
+      </a>
+      <a class="item poiMenuList item-text-wrap active" href="#" ng-click="miViajeVisitados()">
+        <h2 class="padding-left">{{'Visitados' | translate}}</h2>
+      </a>
+      <a class="item poiMenuList item-text-wrap" href="#" ng-click="miViajeMapa()">
+        <h2 class="padding-left">{{'Mapa' | translate}}</h2>
+      </a>
+    </div>
+  </ion-header>
+  <ion-content on-hold="onHold()" class="has-header has-subheader">
+    <ion-list>
+      <div ng-repeat="item in items">
+        <a class="item item-avatar" href="#/tab/{{item.path}}/{{item.id}}">
+          <div class="">
+            <i class="icon ion-checkmark-round right padding-left" ng-show="item.visited"></i>
+            <h2 ng-bind-html="item.title"></h2>
+            <p>{{item.tipo}}</p>
+            <p class="right side-note" ng-show="item.distance">
+              4km<i class="icon ion-location padding-left"></i>
+            </p>
+            <div class="list-rating">
+              <i class="icon" ng-class="{'ion-ios-star-outline':poiRatings[item.id]<0.5, 'ion-ios-star-half':poiRatings[item.id]>=0.5 && poiRatings[item.id]<1, 'ion-ios-star':poiRatings[item.id]>=1}"></i>
+              <i class="icon" ng-class="{'ion-ios-star-outline':poiRatings[item.id]<1.5, 'ion-ios-star-half':poiRatings[item.id]>=1.5 && poiRatings[item.id]<2, 'ion-ios-star':poiRatings[item.id]>=2}"></i>
+              <i class="icon" ng-class="{'ion-ios-star-outline':poiRatings[item.id]<2.5, 'ion-ios-star-half':poiRatings[item.id]>=2.5 && poiRatings[item.id]<3, 'ion-ios-star':poiRatings[item.id]>=3}"></i>
+              <i class="icon" ng-class="{'ion-ios-star-outline':poiRatings[item.id]<3.5, 'ion-ios-star-half':poiRatings[item.id]>=3.5 && poiRatings[item.id]<4, 'ion-ios-star':poiRatings[item.id]>=4}"></i>
+              <i class="icon" ng-class="{'ion-ios-star-outline':poiRatings[item.id]<4.5, 'ion-ios-star-half':poiRatings[item.id]>=4.5 && poiRatings[item.id]<5, 'ion-ios-star':poiRatings[item.id]>=5}"></i>
+            </div>
+          </div>
+          <div class="item-image poi-list-item"><img class="poi-list-avatar" src="{{fileSystem}}{{appDirectory}}{{appLanguage}}/{{item.path}}/{{item.mainImageApp}}"></div>
+
+        </a>
+      </div>
+      <div ng-repeat="route in routes">
+        <a class="item item-avatar" href="#/tab/{{route.path}}/{{route.routeId}}">
+          <div class="">
+            <i class="icon ion-checkmark-round right padding-left" ng-show="route.visited"></i>
+            <h2 ng-bind-html="route.title"></h2>
+            <p>{{route.tipo}}</p>
+            <p class="right side-note" ng-show="route.distance">
+              {{route.distance}}<i class="icon ion-location padding-left"></i>
+            </p>
+            <div class="list-rating">
+              <i class="icon" ng-class="{'ion-ios-star-outline':routeRatings[route.routeId]<0.5, 'ion-ios-star-half':routeRatings[route.routeId]>=0.5 && routeRatings[route.routeId]<1, 'ion-ios-star':routeRatings[route.routeId]>=1}"></i>
+              <i class="icon" ng-class="{'ion-ios-star-outline':routeRatings[route.routeId]<1.5, 'ion-ios-star-half':routeRatings[route.routeId]>=1.5 && routeRatings[route.routeId]<2, 'ion-ios-star':routeRatings[route.routeId]>=2}"></i>
+              <i class="icon" ng-class="{'ion-ios-star-outline':routeRatings[route.routeId]<2.5, 'ion-ios-star-half':routeRatings[route.routeId]>=2.5 && routeRatings[route.routeId]<3, 'ion-ios-star':routeRatings[route.routeId]>=3}"></i>
+              <i class="icon" ng-class="{'ion-ios-star-outline':routeRatings[route.routeId]<3.5, 'ion-ios-star-half':routeRatings[route.routeId]>=3.5 && routeRatings[route.routeId]<4, 'ion-ios-star':routeRatings[route.routeId]>=4}"></i>
+              <i class="icon" ng-class="{'ion-ios-star-outline':routeRatings[route.routeId]<4.5, 'ion-ios-star-half':routeRatings[route.routeId]>=4.5 && routeRatings[route.routeId]<5, 'ion-ios-star':routeRatings[route.routeId]>=5}"></i>
+            </div>
+          </div>
+          <div class="item-image poi-list-item"><img class="poi-list-avatar" src="{{fileSystem}}{{appDirectory}}{{appLanguage}}/routes/{{route.photoApp}}"></div>
+        </a>
+      </div>
+      <div ng-repeat="event in events">
+        <a class="item item-event" href="#/tab/events/{{event.eventId}}">
+          <i class="icon ion-checkmark-round right padding-left" ng-show="event.visited"></i>
+          <div class="aside">
+            <p class="day">{{event.dayStart}}</p>
+            <p class="month">{{event.monthStart}}</p>
+            </p>
+          </div>
+          <h2 ng-bind-html="event.name"></h2>
+          <p>{{"Eventos"|translate}}</p>
+          <p class="right side-note" ng-show="event.latitude">
+            {{event.distance}}<i class="icon ion-location padding-left"></i>
+          </p>
+        </a>
+      </div>
+      <div ng-show="!items"><p class="item">{{'miviaje.empty'|translate}}</p></div>
+    </ion-list>
+  </ion-content>
+</ion-view>

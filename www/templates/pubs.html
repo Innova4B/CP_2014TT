@@ -1,0 +1,32 @@
+<ion-view hide-nav-bar="false"  title="{{'Bares' | translate}}">
+  <ion-nav-buttons side="left">
+    <button class="button button-icon button-clear button-light ion-navicon" menu-toggle="left">
+    </button>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="right">
+    <button class="button button-icon button-clear button-light fa fa-filter sidemenu" ng-click="showFilter()"></button>
+    <button class="button button-icon button-clear button-light fa fa-sort-amount-asc sidemenu" ng-click="showSortDialog()"></button>
+  </ion-nav-buttons>
+  <ion-content>
+    <ion-list>
+      <div ng-repeat="pub in pubs">
+        <a class="item item-avatar" href="#/tab/pubs/{{pub.id}}" on-hold="onHold(pub)"  ng-show="pub.visible">
+          <div class="item-image poi-list-item"><img class="poi-list-avatar" src="{{fileSystem}}{{appDirectory}}{{appLanguage}}/pubs/{{pub.mainImageApp}}"></div>
+
+          <h2>{{pub.title}}</h2>
+          <p ng-bind-html="pub.description"></p>
+          <p class="right side-note">
+            {{pub.distance}}<i class="icon ion-location padding-left"></i>
+          </p>
+          <i class="icon" ng-class="{'ion-ios-star-outline':poiRatings[pub.id]<0.5, 'ion-ios-star-half':poiRatings[pub.id]>=0.5 && poiRatings[pub.id]<1, 'ion-ios-star':poiRatings[pub.id]>=1}"></i>
+          <i class="icon" ng-class="{'ion-ios-star-outline':poiRatings[pub.id]<1.5, 'ion-ios-star-half':poiRatings[pub.id]>=1.5 && poiRatings[pub.id]<2, 'ion-ios-star':poiRatings[pub.id]>=2}"></i>
+          <i class="icon" ng-class="{'ion-ios-star-outline':poiRatings[pub.id]<2.5, 'ion-ios-star-half':poiRatings[pub.id]>=2.5 && poiRatings[pub.id]<3, 'ion-ios-star':poiRatings[pub.id]>=3}"></i>
+          <i class="icon" ng-class="{'ion-ios-star-outline':poiRatings[pub.id]<3.5, 'ion-ios-star-half':poiRatings[pub.id]>=3.5 && poiRatings[pub.id]<4, 'ion-ios-star':poiRatings[pub.id]>=4}"></i>
+          <i class="icon" ng-class="{'ion-ios-star-outline':poiRatings[pub.id]<4.5, 'ion-ios-star-half':poiRatings[pub.id]>=4.5 && poiRatings[pub.id]<5, 'ion-ios-star':poiRatings[pub.id]>=5}"></i>
+          
+        </a>
+      </div>
+    </ion-list>
+
+  </ion-content>
+</ion-view>

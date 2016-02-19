@@ -1,0 +1,29 @@
+<div ng-controller="GuiaCtrl">
+  <div class="fade" ng-click="closeDialog()"></div>
+  <ion-list class="guide-list-box">
+    <a class="item guideList item-text-wrap" href="#/tab/rutas" ng-click="closeDialog()">
+      <i class="icon ion-map"></i>
+      <h2 class="padding-left">{{'Rutas' | translate}}</h2>
+    </a>
+    <a class="item guideList item-text-wrap" href="#/tab/pois"  ng-click="closeDialog()">
+      <i class="icon ion-location"></i>
+      <h2 class="padding-left">{{'PuntosDeInteres' | translate}}</h2>
+    </a>
+    <a class="item guideList item-text-wrap" href="#/tab/restaurants"  ng-click="closeDialog()">
+      <i class="icon ion-android-restaurant"></i>
+      <h2 class="padding-left">{{'Restaurantes' | translate}}</h2>
+    </a>
+    <a class="item guideList item-text-wrap" href="#/tab/pubs"  ng-click="closeDialog()">
+      <i class="icon ion-android-bar"></i>
+      <h2 class="padding-left">{{'Bares' | translate}}</h2>
+    </a>
+    <a class="item guideList item-text-wrap" href="#/tab/shops"  ng-click="closeDialog()">
+      <i class="icon ion-bag"></i>
+      <h2 class="padding-left">{{'Tiendas' | translate}}</h2>
+    </a>
+    <a class="item guideList item-text-wrap" href="#/tab/accommodations"  ng-click="closeDialog()">
+      <i class="icon fa fa-bed"></i>
+      <h2 class="padding-left">{{'Alojamiento' | translate}}</h2>
+    </a>
+  </ion-list>
+</div>

@@ -1,0 +1,140 @@
+{
+	"tab.guia": "Gida",
+	"tab.miviaje": "Nire bidaia",
+	"tab.mapa": "Mapa",
+	"tab.configuracion": "Konfigurazioa",
+	"Favoritos": "Gogokoak",
+	"Cerca":"Gertu",
+	"Rutas":"Ibilbideak",
+	"PuntosDeInteres":"Interes guneak",
+	"Restaurantes":"Jatetxeak",
+	"Bares": "Tabernak",
+	"Alojamiento": "Ostatua",
+	"Agenda": "Agenda",
+	"Eventos": "Ikuskizunak",
+	"Tiendas": "Dendak",
+	"Informacion": "Informazioa",
+	"Ruta": "Ibilbidea",
+	"PuntoInteres": "Interesgunea",
+	"PuntosInteres": "Interesguneak",
+	"Puntos": "Guneak",
+
+	"pois":"Interes guneak",
+	"restaurants":"Jatetxeak",
+	"pubs": "Tabernak",
+	"accommodations": "Ostatua",
+	"events": "Agenda",
+	"rutas": "Ibilbideak",
+	"shops": "Dendak",
+
+	"Distancia": "Distantzia",
+	"Horas": "orduak",
+	"Duracion": "Iraupena",
+	"Info": "Info",
+	"Opiniones": "Iritziak",
+	"VerMapa": "Mapa ikusi",
+	"Valoracion": "Balorazioa",
+	"Comenzar": "Hasi",
+
+	"Visitado": "Ikusita",
+	"Visitados": "Ikusita",
+	"Comentar": "Iruzkindu",
+	"Mi viaje": "Nire bidaia",
+	"Votar": "Botoa eman",
+	"comentarios": "iruzkin",
+	"Precio": "Prezioa",
+
+	"contextMenu.miviaje": "Nire bidaiara gehitu",
+	"contextMenu.miviaje.eliminar": "Nire bidaiatik kendu",
+	"contextMenu.votar": "Botoa eman",
+	"contextMenu.comentar": "Iruzkindu",
+	"contextMenu.visto": "Ikusita",
+	"contextMenu.visto.eliminar": "Ez ikusita",
+
+	"mapa.tuposicion": "Zure kokapena",
+
+	"miviaje.empty": "Ez duzu interesgunerik gehitu zure bidaiara",
+	"events.empty": "Ez dago gertakizunik aukeratutako hilabetean",
+
+	"Actualizaciones": "Eguneraketak: " ,
+	"DescargaActualizaciones": "¿Eguneraketak deskargatu?",
+	"Cancelar": "Ezeztatu",
+	"Descargar": "Deskargatu",
+
+	"toast.comentario": "Iruzkina ondo gorde da",
+
+	"website": "Webgunea",
+	"llamar": "Deitu",
+
+	"Version": "Aplikazioaren bertsioa",
+	"Language": "Aukeratutako hizkuntza",
+
+	"mes.1": "Urt",
+	"mes.2": "Ots",
+	"mes.3": "Mar",
+	"mes.4": "Api",
+	"mes.5": "Mai",
+	"mes.6": "Eka",
+	"mes.7": "Uzt",
+	"mes.8": "Abu",
+	"mes.9": "Ira",
+	"mes.10": "Urr",
+	"mes.11": "Aza",
+	"mes.12": "Abe",
+
+	"offline.title": "Mapak",
+	"offline.message": "Internet konexioa behar duzu mapak ikusi ahal izateko",
+	"button.accept": "Onartu",
+
+	"eu": "eu_ES",
+	"es": "es_ES",
+
+	"eu-ES": "eu",
+	"es-ES": "es",
+
+	"eu_ES": "Euskera",
+	"es_ES": "Castellano",
+	"ca_ES": "Catalán",
+	"en_GB": "Inglés",
+	"fr_FR": "Francés",
+
+	"Cargando_Datos": "Datuak kargatzen",
+	"Cargando_Mapas": "Mapak kargatzen",
+	"select.language": "Hizkuntza aukeratu",
+	"button.filtro": "Iragazi",
+	"filtro.familia": "Familientzat egokia",
+	"filtro.discapacitados": "Elbarrituentzat egokia",
+	"miviaje.export": "Nire bidaia partekatu",
+
+	"appDeactivated": "Sentitzen dugu, aplikazioa desaktibatuta dago.",
+
+	"Aceptar": "Onartu",
+	"Cancelar": "Itzuli",
+	"button.back": "Atzera",
+
+	"Poblacion": "Biztanleria",
+	"Altitud": "Altitudea",
+
+	"Beber": "Tabernak",
+	"Comer": "Jatetxeak",
+	"Dormir": "Ostatua",
+
+	"Inicio": "Hasiera",
+
+	"transmedia.text": "Erantzun galderari hurrengo interesgunera pasatzeko",
+	"route.next": "Galdera",
+
+	"rightAnswer": "Erantzun zuzena! Ibilbidea jarraitu dezakezu",
+	"wrongAnswer": "Ez da zuzena, saiatu berriro",
+	"wrongAnswer.next": "Ibilbidea jarraitu dezakezu",
+	"lastPoi": "Zorionak, ibilbidearen amaierara iritsi zara",
+	"route.nextPoi": "Hurrengo interesgunea",
+	"answer": "erantzuna",
+	"resolve": "Erantzun zuzena:",
+
+	"Filtrar": "Iragazi",
+	"Ordenar": "Ordenatu",
+
+	"poi.share": "Begira non egon naizen:",
+
+}

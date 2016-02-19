@@ -1,0 +1,25 @@
+<ion-view hide-nav-bar="false" cache-view="false" ng-controller="AudioCtrl" title="{{'tab.mapa' | translate}}">
+  <ion-nav-buttons side="left">
+    <button class="button button-icon button-clear button-light ion-navicon" menu-toggle="left">
+    </button>
+  </ion-nav-buttons>
+    <ion-content scroll="false">
+      <div id="map" class="mapa-cercano" data-tap-disabled="true" ng-class="{'with-audio':hasAudio}"></div>
+      <div class="bottom" ng-class="{'with-audio':hasAudio}">
+        <ion-slide-box does-continue="true" show-pager="false">
+          <ion-slide ng-repeat="photoGroup in photos">
+            <div class="thumbnail" ng-repeat="photo in photoGroup" ng-click="openImage('{{fileSystem}}{{appDirectory}}{{appLanguage}}/{{tipoPoi}}/{{photo}}')">
+              <img src="{{fileSystem}}{{appDirectory}}{{appLanguage}}/{{tipoPoi}}/{{photo}}">
+            </div>
+          </ion-slide>
+        </ion-slide-box>
+      </div>
+      <ion-footer-bar class="bar-light" ng-show="tracks.length>0">
+        <ion-audio-track ng-repeat="track in tracks" track="track">
+          <div class="audio-inline"><ion-audio-play><a class="button button-icon icon ion-play"></a></ion-audio-play></div>
+          <div class="audio-progress-bar"><ion-audio-progress-bar display-time class="audio-inline"></ion-audio-progress-bar></div>
+        </ion-audio-track>
+      </ion-footer-bar>
+    </ion-content>
+    
+</ion-view>

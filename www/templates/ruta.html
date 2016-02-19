@@ -1,0 +1,66 @@
+<ion-view hide-nav-bar="true" title="">
+  <ion-header class="bar bar-custom bar-header">
+      <a class="button back-button" href="{{backPath}}"><i class="icon ion-chevron-left"></i></a>
+      <h1 class="title">{{'Rutas' | translate}}</h1>
+      <a class="button" href="#" ng-click="openShare(ruta.photoApp)"><i class="icon ion-android-share-alt"></i></a>
+  </ion-header>
+  <ion-header class="bar bar-custom bar-subheader">
+    <div class="poi-menu-buttons">
+      <a class="item poiMenuList item-text-wrap active" href="#" ng-click="poiInfo()">
+        <h2 class="padding-left">{{'Info' | translate}}</h2>
+      </a>
+      <a class="item poiMenuList item-text-wrap" href="#" ng-click="poiMapa()">
+        <h2 class="padding-left">{{'Mapa' | translate}}</h2>
+      </a>
+      <a class="item poiMenuList item-text-wrap" href="#" ng-click="poiOpinion()">
+        <h2 class="padding-left">{{'Opiniones' | translate}}</h2>
+      </a>
+    </div>
+  </ion-header>
+  <ion-content class="has-header has-subheader">
+    <ion-slide-box does-continue="true" class="imgHeader">
+        <ion-slide>
+          <img src="{{fileSystem}}{{appDirectory}}{{appLanguage}}/routes/{{ruta.photoApp}}" orientable>
+        </ion-slide>
+    </ion-slide-box>
+    <div class="round-button-outer">
+      <div class="round-button-group" ng-controller="FavoriteCtrl">
+          <div class="round-button">
+            <button class="button button-light social-button" ng-click="visitado(2)" ng-class="{'button-visited':isVisited}">
+              <i class="ion-checkmark"></i>
+            </button>
+          </div>
+          <div class="round-button">
+            <button class="button button-light social-button" ng-click="favorito(2)" ng-class="{'button-visited':isFavorite}">
+              <i class="ion-android-favorite"></i>
+            </button>
+            </div>
+      </div>
+    </div>
+    <div class="item item-text-wrap poi-item">
+      <div class="poi-detail-header">
+        <div class="poi-list-rating">
+          <i class="icon" ng-class="{'ion-ios-star-outline':routeRatings[ruta.routeId]<0.5, 'ion-ios-star-half':routeRatings[ruta.routeId]>=0.5 && routeRatings[ruta.routeId]<1, 'ion-ios-star':routeRatings[ruta.routeId]>=1}"></i>
+          <i class="icon" ng-class="{'ion-ios-star-outline':routeRatings[ruta.routeId]<1.5, 'ion-ios-star-half':routeRatings[ruta.routeId]>=1.5 && routeRatings[ruta.routeId]<2, 'ion-ios-star':routeRatings[ruta.routeId]>=2}"></i>
+          <i class="icon" ng-class="{'ion-ios-star-outline':routeRatings[ruta.routeId]<2.5, 'ion-ios-star-half':routeRatings[ruta.routeId]>=2.5 && routeRatings[ruta.routeId]<3, 'ion-ios-star':routeRatings[ruta.routeId]>=3}"></i>
+          <i class="icon" ng-class="{'ion-ios-star-outline':routeRatings[ruta.routeId]<3.5, 'ion-ios-star-half':routeRatings[ruta.routeId]>=3.5 && routeRatings[ruta.routeId]<4, 'ion-ios-star':routeRatings[ruta.routeId]>=4}"></i>
+          <i class="icon" ng-class="{'ion-ios-star-outline':routeRatings[ruta.routeId]<4.5, 'ion-ios-star-half':routeRatings[ruta.routeId]>=4.5 && routeRatings[ruta.routeId]<5, 'ion-ios-star':routeRatings[ruta.routeId]>=5}"></i>
+        </div>
+        <a class="item item-icon-left poi-detail" id="poi-detail" href="#">
+          <i class="icon ion-map pois"></i><h1>{{ruta.title}}</h1>
+        </a>
+        <p ng-show="{{ruta.time}}">{{'Duracion'|translate}}: {{ruta.time}} {{'Horas'|translate}}</p>
+        <div class="friendly">
+          <i class="icon fa fa-wheelchair right friendly" ng-show="ruta.disabledFriendly"></i>
+          <i class="icon fa fa-child right friendly" ng-show="ruta.childFriendly"></i>
+        </div>
+      </div>
+      <div class="poi-detail-body">
+        <p ng-bind-html="ruta.description"></p>
+        <p ng-bind-html="ruta.moreInfo" class="wrapping_list_item padding-top padding-top"></p>
+        <button class="button icon-left ion-map button-custom imgCenter" ng-click="startRoute()">{{'Comenzar'|translate}}</button>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>

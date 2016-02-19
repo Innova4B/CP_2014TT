@@ -1,0 +1,84 @@
+<ion-view hide-nav-bar="true" title="">
+  
+  <ion-header class="bar bar-custom bar-header">
+      <a class="button back-button" href="{{backPath}}"><i class="icon ion-chevron-left"></i></a>
+      <h1 class="title">{{'Rutas' | translate}}</h1>
+  </ion-header>
+  <ion-header class="bar bar-custom bar-subheader">
+    <div class="poi-menu-buttons">
+      <a class="item poiMenuList item-text-wrap" href="#" ng-click="poiInfo()">
+        <h2 class="padding-left">{{'Info' | translate}}</h2>
+      </a>
+      <a class="item poiMenuList item-text-wrap" href="#" ng-click="poiMapa()">
+        <h2 class="padding-left">{{'Mapa' | translate}}</h2>
+      </a>
+      <a class="item poiMenuList item-text-wrap" href="#" ng-click="poiOpinion()">
+        <h2 class="padding-left">{{'Opiniones' | translate}}</h2>
+      </a>
+    </div>
+  </ion-header>
+  <ion-content class="has-header has-subheader">
+    <ion-slide-box does-continue="true" class="imgHeader">
+      <ion-slide>
+        <img src="{{fileSystem}}{{appDirectory}}{{appLanguage}}/{{item.tipo}}/{{item.mainImageApp}}" orientable>
+      </ion-slide>
+      <ion-slide ng-repeat="photo in item.photosApp">
+        <img ng-src="{{fileSystem}}{{appDirectory}}{{appLanguage}}/{{item.tipo}}/{{photo}}" orientable> 
+      </ion-slide>
+    </ion-slide-box>
+    <div class="item item-text-wrap poi-item">
+      <div class="poi-detail-header">
+        <div class="poi-list-rating">
+          <i class="icon" ng-class="{'ion-ios-star-outline':poiRatings[item.id]<0.5, 'ion-ios-star-half':poiRatings[item.id]>=0.5 && poiRatings[item.id]<1, 'ion-ios-star':poiRatings[item.id]>=1}"></i>
+          <i class="icon" ng-class="{'ion-ios-star-outline':poiRatings[item.id]<1.5, 'ion-ios-star-half':poiRatings[item.id]>=1.5 && poiRatings[item.id]<2, 'ion-ios-star':poiRatings[item.id]>=2}"></i>
+          <i class="icon" ng-class="{'ion-ios-star-outline':poiRatings[item.id]<2.5, 'ion-ios-star-half':poiRatings[item.id]>=2.5 && poiRatings[item.id]<3, 'ion-ios-star':poiRatings[item.id]>=3}"></i>
+          <i class="icon" ng-class="{'ion-ios-star-outline':poiRatings[item.id]<3.5, 'ion-ios-star-half':poiRatings[item.id]>=3.5 && poiRatings[item.id]<4, 'ion-ios-star':poiRatings[item.id]>=4}"></i>
+          <i class="icon" ng-class="{'ion-ios-star-outline':poiRatings[item.id]<4.5, 'ion-ios-star-half':poiRatings[item.id]>=4.5 && poiRatings[item.id]<5, 'ion-ios-star':poiRatings[item.id]>=5}"></i>
+        </div>
+        <div class="item item-icon-left poi-detail" id="poi-detail" href="#">
+          <i class="icon ion-location pois"></i><h1>{{item.title}}</h1>
+        </div>
+        <div class="friendly">
+          <i class="icon fa fa-wheelchair right friendly" ng-show="item.disabledFriendly"></i>
+          <i class="icon fa fa-child right friendly" ng-show="item.childFriendly"></i>
+        </div>
+        <p ng-show="item.cost"><i class="icon icon-detail fa fa-money padding-right"></i>{{'Precio'|translate}}: {{item.cost}}</p>
+        <p ng-show="item.address"><i class="icon icon-detail fa fa-thumb-tack padding-right padding-bottom"></i>{{item.address}}</p>
+      </div>
+      <div class="poi-detail-body">
+        <p ng-bind-html="item.description" class="wrapping_list_item padding-top padding-top"></p>
+        <div class="contact-buttons">
+          <div class="round-contact-button">
+            <button class="button button-light bottom-button" ng-click="dialNumber()" ng-show="restaurant.phone">
+              <i class="ion-ios-telephone"></i>
+            </button>
+          </div>
+          <div class="round-contact-button">
+            <button class="button button-light bottom-button" ng-click="openUrl()" ng-show="restaurant.url">
+              <i class="ion-link"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="poi-detail-body">
+        <div class="question" ng-show="!showNext && !lastPoi">
+          <p class="wrapping_list_item padding-top">{{'transmedia.text'|translate}}</p>
+          <button class="button icon-left ion-arrow-right-a button-custom imgCenter" ng-click="transmediaQuestion()">{{'route.next'|translate}}</button>
+        </div>
+        <div class="response" ng-show="maxReached && !lastPoi"><p>{{'resolve'|translate}} {{resolve}}</p></div>
+        <div class="response"><p>{{userResponse|translate}}</p></div>
+        <div class="nextQuestion" ng-show="showNext && !lastPoi">
+          <button class="button icon-left ion-arrow-right-a button-custom imgCenter" ng-click="nextPoi()">{{'route.nextPoi'|translate}}</button>
+        </div>
+      </div>
+    </div>
+
+    
+  </ion-content>
+  <ion-footer-bar class="bar-light" ng-controller="AudioCtrl" ng-show="tracks.length>0">
+    <ion-audio-track ng-repeat="track in tracks" track="track">
+      <div class="audio-inline"><ion-audio-play><a class="button button-icon icon ion-play"></a></ion-audio-play></div>
+      <div class="audio-progress-bar"><ion-audio-progress-bar display-time class="audio-inline"></ion-audio-progress-bar></div>
+    </ion-audio-track>
+  </ion-footer-bar>
+</ion-view>

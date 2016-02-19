@@ -1,0 +1,50 @@
+<ion-view hide-nav-bar=" true" title="">
+  <ion-header class="bar bar-custom bar-header">
+    <a class="button back-button" href="{{backPath}}"><i class="icon ion-chevron-left"></i></a>
+    <h1 class="title">{{tipo | translate}}</h1>
+  </ion-header>
+  <ion-header class="bar bar-custom bar-subheader">
+    <div class="poi-menu-buttons">
+      <a class="item poiMenuList item-text-wrap" href="#" ng-click="poiInfo()">
+        <h2 class="padding-left">{{'Info' | translate}}</h2>
+      </a>
+      <a class="item poiMenuList item-text-wrap" href="#" ng-click="poiMapa()">
+        <h2 class="padding-left">{{'Mapa' | translate}}</h2>
+      </a>
+      <a class="item poiMenuList item-text-wrap active" href="#" ng-click="poiOpinion()">
+        <h2 class="padding-left">{{'Opiniones' | translate}}</h2>
+      </a>
+    </div>
+  </ion-header>
+  <ion-content class="has-header has-subheader">
+    <div class="item item-text-wrap">
+      <h1 class="padding-bottom">{{title}}</h1>
+      <ul class="right padding-bottom">
+        <li>
+          <div class="comment-rating">
+            <i class="icon" ng-class="{'ion-ios-star-outline':avgRating<0.5, 'ion-ios-star-half':avgRating>=0.5 && avgRating<1, 'ion-ios-star':avgRating>=1}"></i>
+            <i class="icon" ng-class="{'ion-ios-star-outline':avgRating<1.5, 'ion-ios-star-half':avgRating>=1.5 && avgRating<2, 'ion-ios-star':avgRating>=2}"></i>
+            <i class="icon" ng-class="{'ion-ios-star-outline':avgRating<2.5, 'ion-ios-star-half':avgRating>=2.5 && avgRating<3, 'ion-ios-star':avgRating>=3}"></i>
+            <i class="icon" ng-class="{'ion-ios-star-outline':avgRating<3.5, 'ion-ios-star-half':avgRating>=3.5 && avgRating<4, 'ion-ios-star':avgRating>=4}"></i>
+            <i class="icon" ng-class="{'ion-ios-star-outline':avgRating<4.5, 'ion-ios-star-half':avgRating>=4.5 && avgRating<5, 'ion-ios-star':avgRating>=5}"></i>
+          </div>
+        </li>
+        <li ng-show="{{numVotes}}">{{numVotes}} {{'comentarios'|translate}}</li>
+      </ul>
+    </div>
+    <ion-list class="wrapping_list">
+      <div ng-repeat="opinion in opiniones" ng-show="opinion.comment">
+        <a class="item item-icon-left comment" href="#">
+          <i class="icon ion-chatboxes"></i>
+          <p>{{opinion.comment}}</p>
+          <p class="right side-note">
+            {{opinion.date}}
+          </p>
+          <p class="right side-note padding-right">
+            {{opinion.user}}
+          </p>
+        </a>
+      </div>
+    </ion-list>
+  </ion-content>
+</ion-view>

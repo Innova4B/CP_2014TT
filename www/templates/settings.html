@@ -1,0 +1,20 @@
+<ion-view hide-nav-bar="false" title="{{'tab.configuracion' | translate}}">
+  <ion-nav-buttons side="left">
+    <button class="button button-icon button-clear button-light ion-navicon" menu-toggle="left">
+    </button>
+  </ion-nav-buttons>
+  <ion-content>
+    <div class="card">
+      <div class="item item-text-wrap">
+        <div>
+            <img id="appLogo" class="imgCenter" src="img/appLogo.png" >
+            <p class="settings-title">TouristTour</p>
+        </div>
+
+        <p class="padding-top">{{'Version'|translate}}: {{appVersion}}</p>
+        <p>{{'Language'|translate}}: {{appLanguage}}</p>
+
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

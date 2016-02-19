@@ -1,0 +1,31 @@
+<ion-view hide-nav-bar="false" cache-view="false" ng-controller="AudioCtrl" title="">
+  <ion-nav-buttons side="left">
+    <button class="button button-icon button-clear button-light ion-navicon" menu-toggle="left"></button>
+    <a class="button back-button" href="{{backPath}}"><i class="icon ion-chevron-left"></i></a>
+  </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+    <button class="button ion-information-circled top-button" ng-click="poiInfo()">
+    </button>
+    <button class="button button-light ion-ios-navigate top-button" ng-click="poiMapa()">
+    </button>
+    </ion-nav-buttons>
+    <ion-content scroll="false">
+      <div id="map" class="mapa-event" data-tap-disabled="true" ng-class="{'with-audio':hasAudio}"></div>
+      <div class="bottom" ng-class="{'with-audio':hasAudio}">
+        <ion-slide-box does-continue="true" show-pager="false">
+          <ion-slide ng-repeat="photoGroup in photos">
+            <div class="thumbnail" ng-repeat="photo in photoGroup" ng-click="openImage('{{fileSystem}}{{appDirectory}}{{appLanguage}}/{{tipo}}/{{photo}}')">
+              <img src="{{fileSystem}}{{appDirectory}}{{appLanguage}}/{{tipo}}/{{photo}}">
+            </div>
+          </ion-slide>
+        </ion-slide-box>
+      </div>
+      <ion-footer-bar class="bar-light" ng-show="tracks.length>0">
+        <ion-audio-track ng-repeat="track in tracks" track="track">
+          <div class="audio-inline"><ion-audio-play><a class="button button-icon icon ion-play"></a></ion-audio-play></div>
+          <div class="audio-progress-bar"><ion-audio-progress-bar display-time class="audio-inline"></ion-audio-progress-bar></div>
+        </ion-audio-track>
+      </ion-footer-bar>
+    </ion-content>
+    
+</ion-view>

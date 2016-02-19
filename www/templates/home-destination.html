@@ -1,0 +1,16 @@
+<ion-view hide-nav-bar="false" title="TouristTour">
+  <ion-nav-buttons side="left">
+    <button class="button button-icon button-clear button-light ion-navicon" menu-toggle="left">
+    </button>
+  </ion-nav-buttons>
+  <ion-content ng-controller="GuiaCtrl">
+    
+    <div class="home-destination">
+      <p>Tourist Tour</p>
+      <p>{{'Poblacion' | translate}}</p>
+      <p>{{'Altitud' | translate}}</p>
+    </div>
+    <button class="button button-icon button-clear button-light ion-ios-keypad" ng-click="openMenu()">
+      <button class="button button-icon ion-ios-keypad button-stable" ng-click="openMenu()">button-stable</button>
+  </ion-content>
+</ion-view>

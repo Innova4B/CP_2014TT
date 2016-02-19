@@ -1,0 +1,51 @@
+{
+	"tab.guia": "Gida",
+	"tab.miviaje": "Nire bidaia",
+	"tab.mapa": "Mapa",
+	"tab.configuracion": "Konfigurazioa",
+	"Favoritos": "Gogokoak",
+	"Cerca":"Urbil",
+	"Rutas": "Ibilbideak",
+	"PuntosDeInteres": "Interesguneak",
+	"Restaurantes": "Jatetxeak",
+	"Bares": "Tabernak",
+	"Alojamiento": "Ostatua",
+	"Agenda": "Egunkaria",
+	"Transporte": "Garraioa",
+	"Informacion": "Informazioa",
+
+	"Distancia": "Distantzia",
+	"Horas": "ordu",
+	"Duracion": "Iraupena",
+	"Info": "Info",
+	"Opiniones": "Iritziak",
+	"VerMapa": "Mapa ikusi",
+	"Valoracion": "Balorazioa",
+	"Comenzar": "Hasi",
+
+	"Visitado": "Ikusita",
+	"Comentar": "Iruzkindu",
+	"Votar": "Botoa eman",
+	"comentarios": "iruzkin",
+
+	"contextMenu.miviaje": "Nire bidaiara gehitu",
+	"contextMenu.votar": "Botoa eman",
+	"contextMenu.comentar": "Iruzkindu",
+	"contextMenu.visto": "Ikusita",
+
+	"mapa.tuposicion": "Zure kokapena",
+
+	"Actualizaciones": "Aktualizazio berriak: " ,
+	"DescargaActualizaciones": "¿Deskargatu aktualizazio berriak?",
+	"Cancelar": "Orain ez",
+	"Descargar": "Deskargatu",
+	"Cargando_Datos": "Datuak Kargatzen",
+	"Cargando_Mapas": "Mapak Kargatzen",
+
+	"toast.comentario": "Iruzkina ondo gorde da",
+	
+	"eu": "eu-ES",
+	"es": "es-ES",
+
+	"appDeactivated": "Barkatu, aplikazioa desaktibatuta dago."
+}

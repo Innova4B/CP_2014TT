@@ -1,0 +1,25 @@
+<ion-view hide-nav-bar="false"  title="{{'Informacion' | translate}}">
+  <ion-nav-buttons side="left">
+    <button class="button button-icon button-clear button-light ion-navicon" menu-toggle="left">
+    </button>
+  </ion-nav-buttons>
+  <ion-content>
+    <ion-slide-box does-continue="true" auto-play="true" class="imgHeader">
+      <ion-slide ng-repeat="image in images">
+        <img ng-src="{{fileSystem}}{{appDirectory}}{{appLanguage}}/info/{{image}}" orientable>
+      </ion-slide>
+    </ion-slide-box>
+    <ion-list>
+      <div ng-repeat="info in infos">
+        <ion-item class="item-stable"
+                  ng-click="toggleInfo(info)"
+                  ng-class="{active: isInfoShown(info)}">
+            <i class="icon" ng-class="isInfoShown(info) ? 'ion-chevron-down' : 'ion-chevron-right'"></i>
+          <h2 class="info-title">{{info.title}}</h2>
+          <p ng-bind-html="info.content" class="padding-left" ng-class="{wrapping_list_item: isInfoShown(info)}">{{info.content}}</p>
+        </ion-item>
+      </div>
+    </ion-list>
+
+  </ion-content>
+</ion-view>
